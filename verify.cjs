@@ -48,6 +48,8 @@ run(`for(const m of curriculum)for(const q of m.review){const r=questionRef(q);i
 assert.equal(run(`cleanName('  fanu  ')`),'Fanu');assert(!/[<>!]/.test(run(`cleanName('<b>Ada</b>!!')`)));
 assert.equal(run(`cleanChild({name:'Fife',gender:'girl'}).gender`),'girl');assert.equal(run(`cleanChild({name:'',gender:'boy'}).gender`),'');
 run(`state.child={name:'Fanu',gender:'boy'};`);assert.equal(run(`greetParts(false)[0].clip`),'common:hi-fanu');
-run(`state.child={name:'Zara',gender:'girl'};`);assert.equal(run(`greetParts(true)[0].clip`),null);assert.equal(run(`greetParts(true)[1].clip`),'common:backRest');
+run(`state.child={name:'Zara',gender:'girl',color:'blue'};`);assert.equal(run(`greetParts(true)[0].clip`),'common:back-friend');assert.equal(run(`cleanChild({name:'Zara',gender:'girl',color:'teal'}).color`),'');
+// Every spoken part on every screen has a Storyteller recording.
+run(`for(const p of [...greetParts(false),...greetParts(true)])if(!clipRange(p.clip))throw Error('greeting without recording '+p.clip);`);assert.equal(run(`greetParts(true)[1].clip`),'common:backRest');
 run("setView('entry');setView('hello');setView('parent');setView('home');");
 console.log('PASS: 150 modules, 750 question placements, review ordering, scoring, unlocks, retries, mastery retention, preview isolation, saved progress, validation, and worksheet content, curriculum wording, read-aloud speech rules, Storyteller recordings, and the welcome screens.');
