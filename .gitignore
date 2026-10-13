@@ -1,0 +1,7 @@
+.voice-cache/
+manifest.json
+kokoro-v1.0.onnx
+voices-v1.0.bin
+node_modules/
+__pycache__/
+.DS_Store
