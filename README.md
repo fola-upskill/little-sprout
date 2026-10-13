@@ -4,6 +4,9 @@ A guided kindergarten web app for ages 5–6. Includes 50 progressive modules pe
 
 ## Use it
 
+On first visit the app asks for the child's first name and whether they are a boy or a girl, then greets them by name out loud ("Welcome, Fanu!"). Return visits say "Welcome back". The name is used on screen and in the Grown-up corner, stays in this browser only, and can be changed in the Grown-up corner. Fanu and Fife have recorded Storyteller greetings; other names are greeted with the device voice.
+
+
 Open `dist/index.html` in a modern browser, or use the private hosted site. Begin with module 1 in each subject. A parent or caregiver should read along and supervise home activities.
 
 Each module has teaching, three focus questions, two reinforcement questions, and a home activity. Four of five correct on first choices plus the home activity unlocks the next module. Wrong choices can be retried with feedback. Parent previews never change progress.

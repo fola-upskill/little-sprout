@@ -44,4 +44,10 @@ run(`for(const [f,clips] of Object.entries(clipScript())){if(!VOICE_CLIPS[f])thr
 for(const f of Object.keys(run('VOICE_CLIPS')))assert(fs.statSync('dist/voice/'+f+'.mp3').size>1000,'audio file '+f);
 // Review questions point to the recording of their original question.
 run(`for(const m of curriculum)for(const q of m.review){const r=questionRef(q);if(r.j<0||r.m.id!==q.sourceId)throw Error('review recording '+m.id);}`);
-console.log('PASS: 150 modules, 750 question placements, review ordering, scoring, unlocks, retries, mastery retention, preview isolation, saved progress, validation, and worksheet content, curriculum wording, read-aloud speech rules, and Storyteller recordings.');
+// Entry screen: names are cleaned and kept only in this browser; greetings use recordings when available.
+assert.equal(run(`cleanName('  fanu  ')`),'Fanu');assert(!/[<>!]/.test(run(`cleanName('<b>Ada</b>!!')`)));
+assert.equal(run(`cleanChild({name:'Fife',gender:'girl'}).gender`),'girl');assert.equal(run(`cleanChild({name:'',gender:'boy'}).gender`),'');
+run(`state.child={name:'Fanu',gender:'boy'};`);assert.equal(run(`greetParts(false)[0].clip`),'common:hi-fanu');
+run(`state.child={name:'Zara',gender:'girl'};`);assert.equal(run(`greetParts(true)[0].clip`),null);assert.equal(run(`greetParts(true)[1].clip`),'common:backRest');
+run("setView('entry');setView('hello');setView('parent');setView('home');");
+console.log('PASS: 150 modules, 750 question placements, review ordering, scoring, unlocks, retries, mastery retention, preview isolation, saved progress, validation, and worksheet content, curriculum wording, read-aloud speech rules, Storyteller recordings, and the welcome screens.');
