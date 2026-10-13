@@ -17,3 +17,8 @@
 .voice-panel .small-note{font-size:12px}
 @media (prefers-reduced-motion:reduce){.option.speaking{transform:none}}
 @media print{.speaking{background:none!important;box-shadow:none!important}}
+
+/* Dedication banner pinned to the top of every page */
+.dedication{position:sticky;top:0;z-index:50;background:var(--ink);color:#f5f1c8;text-align:center;font:600 13px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.5px;padding:9px 16px;box-shadow:0 1px 6px rgba(24,78,67,.18)}
+.dedication strong{color:#efc968;font-weight:800;letter-spacing:1.5px}
+@media print{.dedication{display:none}}
