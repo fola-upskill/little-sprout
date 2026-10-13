@@ -1,5 +1,7 @@
 # Little Sprout Learning
 
+**Live site:** https://fola-upskill.github.io/little-sprout/ · **[What it can and cannot do →](FEATURES.md)**
+
 A guided kindergarten web app for ages 5–6. Includes 50 progressive modules per subject: Math, English, and Science.
 
 ## Use it
