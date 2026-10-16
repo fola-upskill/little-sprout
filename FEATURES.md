@@ -1,8 +1,8 @@
-# Little Sprout Learning: Features
+# Jẹ́léósinmi: Features
 
 > ✿ *Inspired and proudly made for **FANU** and **FIFE*** ✿
 
-Little Sprout is a gentle learning garden for children aged **5–6**. It covers kindergarten **math, English, and science** in short 10–15 minute lessons that a child does with a grown-up nearby. Every lesson is read aloud by a warm, natural voice.
+**Jẹ́léósinmi** is a gentle learning garden for children aged **5–6**. It covers kindergarten **math, English, and science**, plus first steps in **coding (JavaScript)** and **AI**, in short 10–15 minute lessons that a child does with a grown-up nearby. Every lesson is read aloud by a warm, natural voice.
 
 **Try it:** [fola-upskill.github.io/little-sprout](https://fola-upskill.github.io/little-sprout/)
 
@@ -13,10 +13,10 @@ Little Sprout is a gentle learning garden for children aged **5–6**. It covers
 | | |
 |---|---|
 | **Ages** | 5–6 (kindergarten) |
-| **Subjects** | Math · English · Science |
-| **Lessons** | 150 total (50 per subject, in 10 units of 5) |
+| **Subjects** | Math · English · Science · Coding (JavaScript) · AI |
+| **Lessons** | 250 total (50 per subject, in 10 units of 5) |
 | **Lesson length** | About 10–15 minutes |
-| **Voice** | Recorded natural "Storyteller" voice, about an hour of narration |
+| **Voice** | Recorded natural "Storyteller" voice, about an hour and a half of narration |
 | **Cost** | Free. No ads, no sign-up, no accounts |
 | **Privacy** | Name, progress, and settings stay on the device |
 | **Works on** | Phones, tablets, and computers in a modern browser |
@@ -36,7 +36,7 @@ Little Sprout is a gentle learning garden for children aged **5–6**. It covers
 - The **whole site changes color** to match: the banner, buttons, headings, progress bars, and lesson tiles. Each theme was checked to stay easy to read.
 
 ### 🗣️ Read everything aloud in a natural voice
-- **Everything is narrated.** Every lesson sentence, question, answer choice, explanation, hint, cheer, and welcome is pre-recorded in the **Storyteller** voice. That's more than 1,800 lines, and the voice sounds the same on every device.
+- **Everything is narrated.** Every lesson sentence, question, answer choice, explanation, hint, cheer, and welcome is pre-recorded in the **Storyteller** voice. That's more than 3,000 lines, and the voice sounds the same on every device.
 - **Follow-along highlighting.** Each sentence or answer choice lights up while it's being read.
 - **Symbols said as words.** *"2 + 3 = ?"* becomes *"2 plus 3 equals what?"*, a blank becomes *"blank"*, and letters are said as *"small letter a"*.
 - **Speed choice.** Grown-ups can pick **Natural** or **Slow and clear**.
@@ -46,6 +46,14 @@ Little Sprout is a gentle learning garden for children aged **5–6**. It covers
 | Math | English | Science |
 |---|---|---|
 | Count to 5 · Count to 10 · Compare and order · Shapes around us · Patterns and positions · Addition to 5 · Subtraction to 5 · Numbers to 20 · Measure and sort · Put it all together | Letter beginnings · More letter partners · Short vowel sounds · Listen to words · Blend and read · Build and change words · Word families · Helpful little words · Read little stories · Speak and write | Observe and ask · Our five senses · Explore materials · Living things · Growing plants · Animal explorers · Weather watchers · Earth and sky · Care and motion · Investigate and celebrate |
+
+| Coding (JavaScript) | AI |
+|---|---|
+| What is coding? · Step by step · Find the bug · Repeat it · If this, then that · Meet JavaScript · Boxes called variables · Math with code · Make it happen · Little coder projects | What is AI? · Learning from examples · Sorting and patterns · AI that sees · AI that listens and talks · AI helpers around us · AI makes mistakes · Be safe with AI · People are in charge · Little AI explorer |
+
+**Coding** starts with "computers follow instructions" and grows step by step: sequences, finding and fixing bugs, loops, and if-rules, without a screen at first. Then come real **JavaScript** lines such as `console.log("Hi")`, `let pets = 2`, `5 > 3`, and `function wave() { }`. Code is shown in a code font and read aloud in words ("console dot log, Hi in quotes").
+
+**AI** explains, at a 5-year-old's level, what AI is, how it learns from labeled examples, how it sorts, sees, listens, and talks, where it helps (maps, spelling, translation, robots), that it **makes mistakes and must be checked**, how to stay **safe and keep private things private**, and that **people are in charge**.
 
 Every lesson follows the same four steps:
 1. **Learn:** a short, simple explanation.
@@ -61,7 +69,7 @@ Every lesson follows the same four steps:
 
 ### 👪 Support the grown-up
 - **Grown-up corner.** It shows progress by subject, the next lesson in each, and **skills to revisit** (questions missed on the first try).
-- **Preview any lesson.** A grown-up can look at any of the 150 lessons ahead of time without changing the child's progress.
+- **Preview any lesson.** A grown-up can look at any of the 250 lessons ahead of time without changing the child's progress.
 - **Printable worksheets.** Every lesson has a worksheet with a name line, the lesson reminder, five questions, a drawing space, and a separate **answer key** page.
 - **Backup and move progress.** Progress can be exported to a file and imported again, for example to move it to a new device.
 - **Change learner details** (name, gender, color) at any time.
@@ -71,7 +79,7 @@ Every lesson follows the same four steps:
 - The child's name, color, progress, and settings are saved **only in that browser on that device**. Nothing is sent to a server.
 
 ### ✔️ Built to be checked
-- An automated check (`node verify.cjs`) tests all 150 lessons, every answer choice, scoring, unlocking, saved progress, the wording, the speech rules, and that **every spoken line has a recording**.
+- An automated check (`node verify.cjs`) tests all 250 lessons, every answer choice, scoring, unlocking, saved progress, the wording, the speech rules, and that **every spoken line has a recording**.
 - Each update is checked automatically before it goes live on the website. If a check fails, the live site isn't changed.
 
 ---
@@ -79,7 +87,7 @@ Every lesson follows the same four steps:
 ## ❌ What it cannot do (yet)
 
 ### Voice and names
-- **Say every child's name.** The Storyteller voice can only say words that were recorded ahead of time. **Fanu** and **Fife** have their own greetings. Any other child is welcomed as *"little sprout"* in the same voice, with their name shown on screen. *More names can be recorded on request.*
+- **Say every child's name.** The Storyteller voice can only say words that were recorded ahead of time. **Fanu** and **Fife** have their own greetings. Any other child is welcomed as *"little friend"* in the same voice, with their name shown on screen. *More names can be recorded on request.*
 - **Listen to the child.** It doesn't use the microphone, so children answer by tapping, not by speaking.
 - **Speak other languages.** The lessons and the voice are in English only.
 - **Sound out letter sounds exactly.** For blending (*"m, a, t"*), the voice says letter **names**. A grown-up can model the letter **sounds**.
@@ -97,7 +105,7 @@ Every lesson follows the same four steps:
 - **Replace a grown-up.** It's designed for a child **with** a grown-up nearby, who reads along, helps with activities, and celebrates.
 
 ### Technical
-- **Work offline.** It needs an internet connection to load lessons and their audio. The Storyteller recordings are about 37 MB in total, downloaded one lesson at a time as needed.
+- **Work offline.** It needs an internet connection to load lessons and their audio. The Storyteller recordings are about 64 MB in total, downloaded one lesson at a time as needed.
 - **Install as an app.** It runs in the browser; there's no app-store version.
 - **Report usage.** It has no visitor statistics. Privacy-friendly, cookie-free analytics (such as GoatCounter) could be added.
 - **Teacher or classroom view.** There's no dashboard for following several children or a whole class.

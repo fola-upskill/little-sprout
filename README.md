@@ -1,12 +1,12 @@
-# Little Sprout Learning
+# Jẹ́léósinmi
 
 **Live site:** https://fola-upskill.github.io/little-sprout/ · **[What it can and cannot do →](FEATURES.md)**
 
-A guided kindergarten web app for ages 5–6. Includes 50 progressive modules per subject: Math, English, and Science.
+A guided kindergarten web app for ages 5–6, inspired by and made for Fanu and Fife. Includes 50 progressive modules in each of five subjects: Math, English, Science, Coding (JavaScript), and AI — 250 in all.
 
 ## Use it
 
-On first visit the app asks for the child's first name, whether they are a boy or a girl, and their favorite color (the whole site then takes on that color), then greets them by name out loud ("Welcome, Fanu!"). Return visits say "Welcome back". The name is used on screen and in the Grown-up corner, stays in this browser only, and can be changed in the Grown-up corner. Fanu and Fife have recorded Storyteller greetings by name; other children are welcomed as "little sprout" in the same voice, with their name shown on screen.
+On first visit the app asks for the child's first name, whether they are a boy or a girl, and their favorite color (the whole site then takes on that color), then greets them by name out loud ("Welcome, Fanu!"). Return visits say "Welcome back". The name is used on screen and in the Grown-up corner, stays in this browser only, and can be changed in the Grown-up corner. Fanu and Fife have recorded Storyteller greetings by name; other children are welcomed as "little friend" in the same voice, with their name shown on screen.
 
 
 Open `dist/index.html` in a modern browser, or use the private hosted site. Begin with module 1 in each subject. A parent or caregiver should read along and supervise home activities.

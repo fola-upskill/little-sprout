@@ -5,8 +5,8 @@ const document={getElementById(id){if(!elements.has(id))elements.set(id,element(
 const context=vm.createContext({document,window:{scrollTo(){},print(){}},localStorage:{getItem(){return null;},setItem(k,v){saved=v;}},console,setTimeout(){return 1;},clearTimeout(){},Blob,URL,confirm(){return true;}});
 vm.runInContext(fs.readFileSync('dist/curriculum.js','utf8')+'\n'+fs.readFileSync('dist/voice/index.js','utf8')+'\n'+fs.readFileSync('dist/app.js','utf8'),context);
 const run=s=>vm.runInContext(s,context);
-assert.equal(run('curriculum.length'),150);
-for(const subject of ['math','english','science'])assert.equal(run(`curriculum.filter(m=>m.subject==='${subject}').length`),50);
+assert.equal(run('curriculum.length'),250);
+for(const subject of ['math','english','science','coding','ai'])assert.equal(run(`curriculum.filter(m=>m.subject==='${subject}').length`),50);
 run(`for(const m of curriculum){if(m.questions.length!==3||m.review.length!==2)throw Error('question count');for(const q of [...m.questions,...m.review]){if(!q.options.includes(q.answer)||new Set(q.options).size!==q.options.length)throw Error('answer choices');}for(const q of m.review){const source=curriculum.find(x=>x.id===q.sourceId);if(!source||source.subject!==m.subject||source.number>m.number)throw Error('review ordering');}}`);
 assert.equal(run("available(curriculum.find(m=>m.id==='math-2'))"),false);
 run("begin('math-1'); session.step='quiz';");
@@ -17,8 +17,8 @@ run("session.score=3;session.activity=true;finish();");
 assert.equal(run("mastered('math-1')"),false);assert.equal(run("available(curriculum.find(m=>m.id==='math-2'))"),false);
 // Exercise real scoring and completion for every module in every subject.
 run(`for(const m of curriculum){begin(m.id);if(session.m.id!==m.id)throw Error('unlock');session.step='quiz';for(let i=0;i<5;i++){session.index=i;session.first=true;session.answered=false;answer(session.questions[i].options.indexOf(session.questions[i].answer),document.createElement('button'));}if(session.score!==5)throw Error('score');session.activity=true;finish();if(!mastered(m.id))throw Error('mastery');}`);
-assert.equal(run('count()'),150);assert.equal(run('validState(state)'),true);
-assert.equal(Object.keys(JSON.parse(saved).records).length,150);
+assert.equal(run('count()'),250);assert.equal(run('validState(state)'),true);
+assert.equal(Object.keys(JSON.parse(saved).records).length,250);
 run("begin('math-1');session.score=0;session.activity=true;finish();");assert.equal(run("mastered('math-1')"),true);assert.equal(run("record('math-1').best"),5);
 const attempts=run("record('english-50').attempts");run("begin('english-50',true);session.score=5;session.activity=true;finish();");assert.equal(run("record('english-50').attempts"),attempts);
 assert.equal(run('validState({records:{bad:{}}})'),false);
@@ -52,4 +52,12 @@ run(`state.child={name:'Zara',gender:'girl',color:'blue'};`);assert.equal(run(`g
 // Every spoken part on every screen has a Storyteller recording.
 run(`for(const p of [...greetParts(false),...greetParts(true)])if(!clipRange(p.clip))throw Error('greeting without recording '+p.clip);`);assert.equal(run(`greetParts(true)[1].clip`),'common:backRest');
 run("setView('entry');setView('hello');setView('parent');setView('home');");
-console.log('PASS: 150 modules, 750 question placements, review ordering, scoring, unlocks, retries, mastery retention, preview isolation, saved progress, validation, and worksheet content, curriculum wording, read-aloud speech rules, Storyteller recordings, and the welcome screens.');
+// Code is shown in a code font and read aloud in words.
+assert.equal(run("fmt('Type `console.log(\"Hi\")` now')"),'Type <code>console.log(&quot;Hi&quot;)</code> now');
+assert.equal(run("speakable('What does `console.log(\"Hi\")` show?')"),'What does console dot log, Hi in quotes show?');
+assert.equal(run("speakable('`let pets = 2`')"),'let pets equal 2');assert.equal(run("speakable('`score = 2`')"),'score becomes 2');
+assert.equal(run("speakable('True or false: `5 > 3`')"),'True or false: 5 greater than 3');assert.equal(run("speakable('`birthdayCake`')"),'birthday cake');
+assert.equal(run("speakable('`function wave() { }`')"),'function wave');assert.equal(run("speakable('`clap()`')"),'clap');
+assert.equal(run("sentences('Use `console.log(\"Hi\")` here. Then stop.').length"),2);
+run(`for(const m of curriculum)for(const q of m.questions)for(const t of [q.prompt,...q.options,q.why,m.learn,m.activity])if(/[\x60{}]/.test(speakable(t)))throw Error('unspoken code in '+m.id+': '+t);`);
+console.log('PASS: 250 modules in 5 subjects, 1,250 question placements, review ordering, scoring, unlocks, retries, mastery retention, preview isolation, saved progress, validation, and worksheet content, curriculum wording, read-aloud speech rules, Storyteller recordings, and the welcome screens.');

@@ -83,3 +83,9 @@ body[data-color="pink"]{--ink:#6e1f46;--bg:#fdf3f8;--line:#f1d9e5;--soft:#f8deeb
 .swatch{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin:0 4px 0 2px}
 @media(max-width:600px){.color-options{grid-template-columns:repeat(4,1fr);gap:8px}.color-choice i{width:32px;height:32px}.color-choice span{font-size:12px}}
 .module-button.current{background:var(--tint)}
+
+/* Coding and AI subject cards */
+.coding .card-art{background:#e8e0f5}.ai .card-art{background:#f8ecc4}
+/* Code in lessons */
+code{font-family:'Courier New',ui-monospace,Menlo,Consolas,monospace;font-weight:700;background:var(--soft);color:var(--ink);padding:.05em .35em;border-radius:6px;font-size:.95em;overflow-wrap:anywhere}
+@media print{code{background:none;padding:0}}
