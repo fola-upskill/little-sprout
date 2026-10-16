@@ -2,7 +2,7 @@
 
 > ✿ *Inspired and proudly made for **FANU** and **FIFE*** ✿
 
-**Jẹ́léósinmi** is a gentle learning garden for children aged **5–6**. It covers kindergarten **math, English, and science**, plus first steps in **coding (JavaScript)** and **AI**, in short 10–15 minute lessons that a child does with a grown-up nearby. Every lesson is read aloud by a warm, natural voice.
+**Jẹ́léósinmi** is a gentle learning garden for children aged **5–6**. It covers kindergarten **math, English, and science**, plus first steps in **coding (JavaScript)** and **AI**, in short lessons that a child does with a grown-up nearby. There is no daily or time limit: children can learn for as long as they like. Every lesson is read aloud by a warm, natural voice.
 
 **Try it:** [fola-upskill.github.io/little-sprout](https://fola-upskill.github.io/little-sprout/)
 
@@ -15,7 +15,7 @@
 | **Ages** | 5–6 (kindergarten) |
 | **Subjects** | Math · English · Science · Coding (JavaScript) · AI |
 | **Lessons** | 250 total (50 per subject, in 10 units of 5) |
-| **Lesson length** | About 10–15 minutes |
+| **Lesson length** | A few minutes each, with no daily or time limit |
 | **Voice** | Recorded natural "Storyteller" voice, about an hour and a half of narration |
 | **Cost** | Free. No ads, no sign-up, no accounts |
 | **Privacy** | Name, progress, and settings stay on the device |
